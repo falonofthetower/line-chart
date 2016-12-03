@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomeController < Devise::SessionsController
   def index
   end
 end
