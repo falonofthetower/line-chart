@@ -1,3 +1,11 @@
-<% if user_signed_in? %>
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% end %>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">Message Board</a>
+    <% if user_signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-text"><%= "Logged in as: #{current_user.email}" %></p></li>
+        <li class="active"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      </ul>
+    <% end %>
+  </div>
+</nav>
