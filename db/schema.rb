@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202235912) do
+ActiveRecord::Schema.define(version: 20161214012511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "consumptions", force: :cascade do |t|
+    t.integer  "sunday",     default: 0
+    t.integer  "monday",     default: 0
+    t.integer  "tuesday",    default: 0
+    t.integer  "wednesday",  default: 0
+    t.integer  "thursday",   default: 0
+    t.integer  "friday",     default: 0
+    t.integer  "saturday",   default: 0
+    t.integer  "user_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["user_id"], name: "index_consumptions_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

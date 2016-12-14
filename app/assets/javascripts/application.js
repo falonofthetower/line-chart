@@ -14,4 +14,7 @@
 //= requrie bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require Chart.min
+//= require sweetalert
 //= require_tree .
+

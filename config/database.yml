@@ -8,11 +8,11 @@ default: &default
 
 development:
   <<: *default
-  database: custom-dev
+  database: line-chart
 
 test:
   <<: *default
-  database: custom-test
+  database: line-chart-test
 
 production:
   <<: *default
