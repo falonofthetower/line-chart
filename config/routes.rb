@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      # place authenticated routes here
+      resources :consumptions, only: [:index, :create, :edit, :update, :show, :destroy]
+      root 'consumptions#index', as: :authenticated_root
     end
 
     unauthenticated do
