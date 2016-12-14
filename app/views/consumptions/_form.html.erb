@@ -1,0 +1,42 @@
+<%= form_for @consumption, remote: true, authenticity_token: true do |f| %>
+  <div class="control-group">
+    <%= f.label :sunday %><br>
+    <%= f.number_field :sunday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :monday %><br>
+    <%= f.number_field :monday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :tuesday %><br>
+    <%= f.number_field :tuesday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :wednesday %><br>
+    <%= f.number_field :wednesday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :thursday %><br>
+    <%= f.number_field :thursday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :friday %><br>
+    <%= f.number_field :friday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :saturday %><br>
+    <%= f.number_field :saturday, min: 0, max: 10 %>
+  </div>
+
+  <div class="control-group">
+    <%= f.submit class: 'btn btn-primary' %>
+
+    <%= link_to 'Reset', @consumption, method: :delete, data: { }, :remote => true, class: "btn btn-danger" %>
+  </div>
+<% end %> 
